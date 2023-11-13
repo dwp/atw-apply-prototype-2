@@ -1,0 +1,44 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Declaration – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Declaration</h1>
+
+      <p>By sending this application, you agree that:</p>
+
+      <div>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the information you have given us is correct, to the best of your knowledge</li>
+          <li>you will update Access to Work if your circumstances change, for example if you get a new job</li>
+        </ul>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+      <form action="/alpha-1i/confirmation">
+        <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+          <b>Agree and send application</b>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+<div class="govuk-grid-column-one-third">
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Do you need a change to your vehicle? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/task-list" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that you need adaptations to the vehicle you use to travel to work or during work?
+                  </h1>
+                </legend>
+
+                <p>Access to Work can help to pay for vehicle adaptations to make driving or travelling easier.</p>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changes-to-your-vehicle-screener" name="changes-to-your-vehicle-screener"
+                           type="radio" value="Yes" {{ checked("changes-to-your-vehicle-screener", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changes-to-your-vehicle-screener-2" name="changes-to-your-vehicle-screener"
+                           type="radio" value="No" {{ checked("changes-to-your-vehicle-screener", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-screener-2">
+                      No
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changes-to-your-vehicle-screener-3" name="changes-to-your-vehicle-screener"
+                           type="radio" value="I do not know" {{ checked("changes-to-your-vehicle-screener", "I do not know") }}>
+                    <label class="govuk-label govuk-radios__label" for="changes-to-your-vehicle-screener-3">
+I do not know
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="changes-to-your-vehicle" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+                <script>
+                {
+                value: "Yes",
+                text: "Yes",
+                checked: checked("workplace-adaptations-screener", "Yes")
+                },
+                {
+                value: "No",
+                text: "No",
+                checked: checked("workplace-adaptations-screener", "No")
+                }
+                </script>
+
+
+{% endblock %}

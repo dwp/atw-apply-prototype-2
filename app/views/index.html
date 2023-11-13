@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Access to work - Apply journey, agent sandbox
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+    For training purposes only. This is not a really service and is not connected to live.
+        </strong>
+      </div>
+
+      <p>
+      This is a sandbox environment for agents to explore the new apply journey. It is based on the prototype and does not contain validation.
+      </p>
+
+
+
+      <a href="/alpha-1i/apply">
+        <button class="govuk-button" data-module="govuk-button">
+          <b>Start Apply Journey </b>
+        </button>
+      </a>
+<p>To reset the prototype and clear answers, select the <strong>'Clear data'</strong> in the footer.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

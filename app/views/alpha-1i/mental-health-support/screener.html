@@ -1,0 +1,107 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Do you need mental health support? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">
+Mental health support            </h1>
+
+<p>Access to Work mental health support is provided by Able Futures and Maximus and we will refer your details to one of these providers.</p>
+            <p class="govuk-body">Mental health support can include things like:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>one-to-one mental health support from a professional, outside of work</li>
+              <li>a support plan for your mental health</li>
+              <li>practical tools and techniques to help you with your mental health at work</li>
+            </ul>
+            <div class="govuk-inset-text">
+              Your employer will not be contacted about mental health support.
+            </div>
+<p>If you do not need any other type of support, you will need to apply directly to <a href="https://able-futures.co.uk/individuals" target='_blank'>Able Futures (opens in a new tab)</a> or <a href="https://atw.maximusuk.co.uk/" traget="_blank">Maximus (opens in a new tab)</a>.</p>
+
+
+
+
+    <form class="form" action="/alpha-1i/task-list" method="post">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+                  Do you want to apply for mental health support as part of this application?
+
+                </legend>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="mental-health-support-screener" name="mental-health-support-screener"
+                           type="radio" value="Yes" {{ checked("mental-health-support-screener", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="mental-health-support-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="mental-health-support-screener-3"
+                           name="mental-health-support-screener"
+                           type="radio" value="No" {{ checked("mental-health-support-screener", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="mental-health-support-screener-3">
+                      No
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="mental-health-support-screener-3"
+                           name="mental-health-support-screener"
+                           type="radio" value="I do not know" {{ checked("mental-health-support-screener", "I do not know") }}>
+                    <label class="govuk-label govuk-radios__label" for="mental-health-support-screener-3">
+I do not know
+                    </label>
+                  </div>
+
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="mental-health" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

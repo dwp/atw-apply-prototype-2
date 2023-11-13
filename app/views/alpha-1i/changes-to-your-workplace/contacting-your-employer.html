@@ -1,0 +1,51 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Contacting your employer – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if data['1i-employment-status2']%}
+    <form class="form" action="/alpha-1i/changes-to-your-workplace/multiple-job" method="post">{% else %}
+        <form class="form" action="/alpha-1i/changes-to-your-workplace/do-you-know-what-you-need" method="post">{% endif %}
+
+      <h1 class="govuk-heading-l">Contacting your employer about changes to your workplace</h1>
+
+      <p>Access to Work may need to contact your employer about this support. We will contact you to ask you for your permission first.</p>
+
+      <p>This does not apply if you are self-employed.</p>
+
+      <div class="govuk-!-padding-bottom-1"></div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

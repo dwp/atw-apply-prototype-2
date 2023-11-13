@@ -1,0 +1,61 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What type of support worker do you need? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/support-workers/how-will-a-support-worker-help" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="type-of-support-worker">
+            What type of support worker do you need?
+          </label>
+          </h1>
+          <div id="type-of-support-worker-hint" class="govuk-hint">
+            For example, 'Note taker'.
+          </div>
+          <div id="type-of-support-worker-hint" class="govuk-hint">
+        If you need more than one type of support worker, you can add more later.
+          </div>
+          <input class="govuk-input" id="type-of-support-worker" name="type-of-support-worker-other" type="text"
+                 aria-describedby="type-of-support-worker-hint" value="{{ data['type-of-support-worker-other'] }}">
+        </div>
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}

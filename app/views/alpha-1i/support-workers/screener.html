@@ -1,0 +1,94 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Do you need a support worker? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/support-workers/screener" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Does your condition mean that you need a support worker at work?
+                  </h1>
+                </legend>
+
+              <div id="dob-hint" class="govuk-hint">
+
+              Access to Work can help to pay for support workers such as job coaches, British Sign Language
+                  (BSL) interpreters and note-takers.  </div>
+
+
+
+
+                <div class="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="support-worker-screener" name="support-worker-screener"
+                           type="radio" value="Yes" {{ checked("support-worker-screener", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="support-worker-screener">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="support-worker-screener-2"
+                           name="support-worker-screener"
+                           type="radio" value="No" {{ checked("support-worker-screener", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="support-worker-screener-2">
+                      No
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="support-worker-screener-3"
+                           name="support-worker-screener"
+                           type="radio" value="I do not know" {{ checked("support-worker-screener", "I do not know") }}>
+                    <label class="govuk-label govuk-radios__label" for="support-worker-screener-3">
+I do not know
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="support-worker-screener-task-list" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What telephone number should we use to contact you? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/how-we-contact-you/what-is-your-email" method="post">
+
+      <h1 class="govuk-heading-l"> What telephone number should we use to contact you? </h1>
+
+      <p>We will contact you about your application by telephone calls and text messages.</p>
+      <p><a href="/alpha-1i/how-we-contact-you/reasonable-adjustment" input type="hidden"
+            name="contacting-you-email" value="true">I find it difficult to hear or speak
+        on the telephone</a></p>
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="telephone-number">UK telephone number</label>
+
+
+        <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel"
+               autocomplete="tel" value="{{ data['telephone-number'] }}"></div>
+
+
+    
+        <div class="govuk-!-padding-bottom-3"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="contacting-you-phone" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

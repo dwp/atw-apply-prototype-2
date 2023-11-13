@@ -1,0 +1,168 @@
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    {% if data['what-is-your-name'] =="true" %}
+
+       <h2 class="govuk-heading-m">Your details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['first-name'] }}     {{ data['last-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/your-details/what-is-your-name">
+              Change
+              <span class="govuk-visually-hidden"> your full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {{ data['date-of-birth-day'] }}
+       {% if (data['date-of-birth-month'] =='01') or (data['date-of-birth-month'] =='1') %} January {% endif%}
+       {% if (data['date-of-birth-month'] =='02') or (data['date-of-birth-month'] =='2') %} February  {% endif%}
+       {% if (data['date-of-birth-month'] =='03') or (data['date-of-birth-month'] =='3') %} March {% endif%}
+       {% if (data['date-of-birth-month'] =='04') or (data['date-of-birth-month'] =='4') %} June {% endif%}
+       {% if (data['date-of-birth-month'] =='05') or (data['date-of-birth-month'] =='5') %} May {% endif%}
+       {% if (data['date-of-birth-month'] =='06') or (data['date-of-birth-month'] =='6') %} June {% endif%}
+       {% if (data['date-of-birth-month'] =='07') or (data['date-of-birth-month'] =='7') %} July {% endif%}
+       {% if (data['date-of-birth-month'] =='08') or (data['date-of-birth-month'] =='8') %} August {% endif%}
+       {% if (data['date-of-birth-month'] =='09') or (data['date-of-birth-month'] =='9') %} September {% endif%}
+       {% if data['date-of-birth-month'] =='10' %} October {% endif%}
+       {% if data['date-of-birth-month'] =='11'%} November {% endif%}
+       {% if data['date-of-birth-month'] =='12' %} December {% endif%}
+  {{ data['date-of-birth-year' ] }}
+          </dd>
+          {% if print != true %}
+          <dd class="govuk-summary-list__actions govuk-!-display-none-print">
+            <a href="/alpha-1i/your-details/what-is-your-date-of-birth">
+              Change
+              <span class="govuk-visually-hidden"> your date of birth</span>
+            </a>
+          </dd>
+          {% endif %}
+        </div>
+
+        {% if data['home-address-select-true'] =="true" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+              {% if data['claimant-postcode-select'] and not data['address-line-1'] %}
+
+        220<br> St Vincent Street<br> Glasgow<br> AB1 1AB
+              {% endif %}
+
+                {% if data['address-line-1'] %}
+
+              {{ data['address-line-1'] }}<br>
+          {{ data['address-line-2'] }}<br>
+                {{ data['address-town'] }}<br>
+              {{ data['address-county'] }}<br>
+              {{ data['address-postcode'] }}
+                {% endif %}
+
+                  {% if data['home-address-select-true'] =="true" and not data['address-manual-true'] =="true"%}
+            <ul class="govuk-list">
+            <li>{{ data['claimant-postcode-select'] }} St Vincent Street,</li>
+              <li>Glasgow,</li>
+              <li>{{data["claimant-postcode"]}}</li>
+            </ul>{% endif %}
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/your-details/home-address-manual-change">
+              Change
+              <span class="govuk-visually-hidden"> your address</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+        <!-- {% if data['address-manual-true'] =="true" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li>{{ data['address-line-1'] }}</li>
+              <li>{{ data['address-line-2'] }}</li>
+              <li>{{ data['address-town'] }}</li>
+              <li>{{ data['address-county'] }}</li>
+              <li>{{ data['address-postcode'] }}</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/your-details/home-address-select">
+              Change
+              <span class="govuk-visually-hidden"> your address</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %} -->
+
+
+
+
+
+
+
+        <!-- {% if data['national-insurance-number-true'] =="true" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/your-details/national-insurance-number">
+              Change
+              <span class="govuk-visually-hidden"> what is your national insurance number</span>
+            </a>
+          </dd>
+        </div>
+
+        {% else %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I don't have a National Insurance number
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/your-details/national-insurance-number">
+              Change
+              <span class="govuk-visually-hidden"> what is your national insurance number</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %} -->
+
+      </dl>
+    {% endif %}
+      </div>
+    </div>
+
+{% endblock %}

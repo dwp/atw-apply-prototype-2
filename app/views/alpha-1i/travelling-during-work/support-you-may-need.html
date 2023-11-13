@@ -1,0 +1,85 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+How will support to travel during work meet your needs? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if data['1i-employment-status2']%}
+        <form class="form" action="/alpha-1i/travelling-during-work/multiple-job" method="post">{% else %}
+          <form class="form" action="/alpha-1i/travelling-during-work/check-your-answers" method="post">{% endif %}
+
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <label class="govuk-label govuk-label--l" for="travel-during-work-support-you-may-need">
+                  <h1 class="govuk-fieldset__heading">
+                    How will support to travel during work meet your needs?
+                  </h1>
+                </label>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <!-- <p class="govuk-body">You can include things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>how you travel during work now</li>
+                  <li>the distance that you usually travel during work</li>
+                  <li>the effect of not currently having any support to travel during work</li>
+                </ul> -->
+
+              <div class="govuk-hint">You could include the effect of not having any support, or what you find difficult about travelling during work.  </div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count" id="travel-during-work-support-you-may-need"
+                              name="travel-during-work-support-you-may-need"
+                              rows="10" aria-describedby="travel-during-work-support-you-may-need-info travel-during-work-support-you-may-need-hint">{{ data['travel-during-work-support-you-may-need'] }}</textarea>
+                  </div>
+
+                  <div id="travel-during-work-support-you-may-need-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 500 characters
+                  </div>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

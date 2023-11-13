@@ -1,0 +1,77 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+Are you doing paid supported permitted work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/eligibility/paid-supported-permitted-work" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Are you doing paid supported permitted work?
+                  </h1>
+                </legend>
+
+                <p>
+                <a href="https://www.gov.uk/government/publications/employment-and-support-allowance-permitted-work-form/permitted-work-factsheet#what-is-supported-permitted-work" class="govuk-link"
+      rel="noreferrer noopener" target="_blank">Supported permitted work (opens in a new tab)</a> is when you are receiving certain benefits and your work is supervised by a professional support worker.</p>
+
+
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="paid-supported-permitted-work" name="paid-supported-permitted-work" type="radio" value="Yes" {{ checked("paid-supported-permitted-work", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="paid-supported-permitted-work">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="paid-supported-permitted-work-2" name="paid-supported-permitted-work" type="radio" value="No" {{ checked("paid-supported-permitted-work", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="paid-supported-permitted-work-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

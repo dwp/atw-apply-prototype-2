@@ -1,0 +1,111 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+How does your disability or health condition affect you at work? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-conditions-and-disabilities/check-your-answers"
+          method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+                  <h1 class="govuk-heading-l">
+                Your conditions or disabilities at work
+                  </h1>
+
+
+                <div class="govuk-!-padding-bottom-5"></div>
+
+
+
+<!-- <p>Knowing how your conditions or disabilities affect you at work helps us to identify the support that you need.</p> -->
+                <!-- <p class="govuk-body">You can include things like:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>how your condition or disability affects you day-to-day</li>
+                  <li>work activities that you find difficult</li>
+
+                </ul> -->
+
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                  Your conditions or disabilities
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    {{ data['1h-your-health-condition-or-disability-1'] }}
+                    </dd>
+                    <!-- <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="1">
+                        Change<span class="govuk-visually-hidden">  Names of conditions or disabilities</span>
+                      </a>
+                    </dd> -->
+                  </div>
+                  </dl>
+                <div class="govuk-form-group">
+                            <label class="govuk-label govuk-label--m" for="1h-your-health-condition-or-disability-affects-your-work-1">
+                            How do your conditions or disabilities affect you at work?
+                            </label>
+<div class="govuk-hint">You can include things like work activities you find difficult and how you are affected on a day-to-day basis.</div>
+                <div class="govuk-!-padding-bottom-2"></div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+                  <div class="govuk-form-group">
+
+                    <textarea class="govuk-textarea govuk-js-character-count"
+                              id="1h-your-health-condition-or-disability-affects-your-work-1"
+                              name="1h-your-health-condition-or-disability-affects-your-work-1"
+                              rows="15"
+                              aria-describedby="1h-your-health-condition-or-disability-affects-your-work-1-info with-hint-hint">{{
+                      data['1h-your-health-condition-or-disability-affects-your-work-1'] }}</textarea>
+                  </div>
+
+                  <div id="1h-your-health-condition-or-disability-affects-your-work-1-info"
+                       class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 1000 characters
+                  </div>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+        <input type="hidden" name="your-health-condition-or-disability-affects-your-work-1" value="true">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

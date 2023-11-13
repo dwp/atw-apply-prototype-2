@@ -1,0 +1,102 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+What condition or disability do you have? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/alpha-1i/your-conditions-and-disabilities/how-does-it-affect-you-at-work-1" method="post">
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+                <h1 class="govuk-heading-l">
+                  Conditions and disabilities
+                  </h1>
+
+                <div class="govuk-!-padding-bottom-2"></div>
+<p>You do not have to be medically diagnosed with a health condition or disability to be eligible for support through Access to Work.</p>
+                <p class="govuk-body">Conditions and disabilities can include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>a physical disability</li>
+                  <li>a mental health condition</li>
+                  <li>a hearing or sight impairment</li>
+                  <li>a learning disability or difference</li>
+                  <li>an illness</li>
+                  <li>a temporary condition</li>
+                  <li>a developmental condition</li>
+                  <li>any other condition, disability or illness</li>
+                </ul>
+
+<!-- <p>You can give information about how your conditions or disabilities affect you in the next step.</p> -->
+                <div class="govuk-!-padding-bottom-2"></div>
+
+                <div class="govuk-form-group">
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="1h-your-health-condition-or-disability-1">
+                What are the names of the conditions or disabilities you have?
+                  </label>
+                  </h2>
+                  <div id="1h-your-health-condition-or-disability-1-hint" class="govuk-hint">
+                    You can add one or more. You can give information about how your conditions or disabilities affect you in the next step.
+
+                  </div>
+                  <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+                    <div class="govuk-form-group">
+                  <textarea class="govuk-textarea govuk-js-character-count"
+                  id="1h-your-health-condition-or-disability-1"
+                  name="1h-your-health-condition-or-disability-1"
+                  rows="5"
+                  aria-describedby="1h-your-health-condition-or-disability-1-hint">{{ data['1h-your-health-condition-or-disability-1'] }}</textarea>
+                  <div id="1h-your-health-condition-or-disability-1-info"
+                       class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 300 characters
+                  </div>
+
+</div>
+
+
+              </fieldset>
+
+
+
+
+
+
+
+
+          <input type="hidden" name="your-health-condition-or-disability-1" value="true">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-1i/task-list">Return to tasks</a></p>
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+
+{% endblock %}
