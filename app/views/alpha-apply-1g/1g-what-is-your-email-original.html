@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is your email address? – Access to Work – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1g/1g-what-is-your-telephone-number">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+        <div class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What is your email address?
+            </h1>
+          </legend>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="your-email-hint">
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <div class="govuk-form-group">
+                <input class="govuk-input" id="your-email" name="your-email" type="your-email" spellcheck="false"
+                       aria-describedby="your-email-hint" autocomplete="your-email">
+                {% if data['email-true'] =="true" %}
+                {{ data['your-email'] }}
+                {% endif %}
+              </div>
+            </fieldset>
+            <div class="govuk-!-padding-bottom-5"></div>
+
+            <p><a href="/alpha-apply-1g/1g-national-insurance-number" input type="hidden"
+                  name="contacting-you-email" value="true">I don't have an email address</a></p>
+
+            
+            <div class="govuk-!-padding-bottom-2"></div>
+          </div>
+
+      <form class="form" action="/alpha-apply-1g/1g-national-insurance-number" method="post">
+        <input type="hidden" name="email-true" value="true">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+        <p><a href="/alpha-apply-1g/1g-task-list">Return to menu</a></p>
+
+    </form>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

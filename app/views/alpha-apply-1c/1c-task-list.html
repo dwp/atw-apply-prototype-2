@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/alpha-apply-1c/1c-email-now-saved">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Access to Work
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Completing your application
+      </h2>
+
+      <p>Fill in the required information and answer the questions in the sections below to complete your
+        application.</p>
+
+      <p>There are around X questions to complete. You can save your application and return to it later.</p>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <ol class="app-task-list">
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Before you start
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c#" aria-describedby="eligibility-status">
+                  Check you're eligible
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> About you
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-what-is-your-full-name" aria-describedby="your-details-status">
+                  Your details
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="your-detail-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-your-health-condition-or-disability-1"
+                   aria-describedby="your-disability-status">
+                  Your health conditions or disabilities
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="your-disability-status">In progress</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Employment
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-employment-status" aria-describedby="about-your-job-status">
+                  About your job and employer
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="about-your-job-status">In progress</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Support and costs
+          </h3>
+
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-specialist-equipment-screener" aria-describedby="specialist-equipment-status">
+                  Specialist aids, equipment and software
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="specialist-equipment-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-support-worker-screener" aria-describedby="support-workers-status">
+                  Support workers
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="support-workers-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-mental-health-support-screener"
+                   aria-describedby="mental-health-support-status">
+                  Mental health support
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="mental-health-support-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-travelling-to-and-from-work-screener" aria-describedby="travelling-to-and-from-work-status">
+                  Travelling to and from work
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="travelling-to-and-from-work-status">In progress</strong>
+            </li>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-travel-during-work-screener" aria-describedby="travel-during-work-status">
+                  Travelling during work
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="travel-during-work-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-workplace-adaptations-screener" aria-describedby="workplace-adaptations-status">
+                  Changes to workplace
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="workplace-adaptations-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-changes-to-your-vehicle-screener"
+                   aria-describedby="workplace-adaptations-status">
+                  Changes to your vehicle
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="changes-to-your-vehicle-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Contacting you about your application
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-contacting-you-phone" aria-describedby="contacting-you-status">
+                  Your contact details
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contacting-you-status">In progress</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">6. </span> Additional information
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-apply-1c/1c-extra-information-screener" aria-describedby="additional-information-status">
+                  Anything else you would like to tell us
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="additional-information-status">In progress</strong>
+            </li>
+          </ul>
+        </li>
+
+      </ol>
+
+      <h2 class="govuk-heading-m">Save and return later to application</h2>
+
+      <p>You can save and return to your application within 14 days.</p>
+
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Save and return later
+      </button>
+
+
+      <h2 class="govuk-heading-m">Declaration</h2>
+
+      <p>By sending this application, you agree that:</p>
+
+      <div>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the information you've given us is correct, to the best of your knowledge</li>
+        <li>you'll update Access to Work if your circumstances change, for example if you get a new job</li>
+      </ul>
+
+    </div>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+        <form action="/alpha-apply-1c/1c-confirmation">
+          <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+            <b>I agree - send my application</b>
+          </button>
+        </form>
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,834 @@
+{% extends "../temp/_BASE.html" %}
+{% set hideback = "true" %}
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+{% set case = 'Alexis'%}
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#past-day">
+                Case Management
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#past-week">
+                Application
+              </a>
+            </li>
+            <!-- <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#past-month">
+                Past month
+              </a>
+            </li> -->
+
+          </ul>
+          <div class="govuk-tabs__panel" id="past-day">
+
+
+         <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+          <p></p>
+
+            <h2 class="govuk-heading-s">Application Summary</h2>
+
+
+        <p> Application refrence: XXXXXX
+        <br> Date Submitted: XXXXXX</p>
+
+        <p><strong>Name:</strong>Alexis Kemp</p>
+
+
+
+        <p><strong>Condition:</strong> XXXXXX</p>
+
+
+        </div>
+
+
+
+
+         <div class="govuk-grid-column-one-third">
+
+
+
+             <div class="update-panel govuk-form-group">
+                <h3 id="update-specialism-heading" class="govuk-heading-m">Update specialism</h3>
+                <form action="/cases/apply/RMPX30/update-specialism" method="post" class="form" id="form-update-specialism" autocomplete="off" data-submitonce="">
+                    <div class="govuk-form-group form-group-compound">
+                    <select class="govuk-select" id="specialismId" name="specialism" aria-labelledby="update-specialism-heading">
+
+
+                            <option value="self_employed" data-name="Self-employed">
+                        Self-employed
+                        </option>
+
+                            <option value="director" data-name="Director">
+                        Director
+                        </option>
+
+                            <option value="hidden" data-name="Hidden impairments">
+                        Hidden impairments
+                        </option>
+
+                            <option value="large_employer" data-name="Large employer">
+                        Large employer
+                        </option>
+
+                            <option value="deaf" data-name="Deaf">
+                        Deaf
+                        </option>
+
+                            <option value="visual" data-name="Visually impaired">
+                        Visually impaired
+                        </option>
+
+                            <option value="unknown" data-name="Pan disability" selected="">
+                        Pan disability
+                        </option>
+
+                    </select>
+                    </div>
+                    <div>
+                    <input type="submit" class="govuk-button" id="submitButtonSpecialism" value="Save">
+                    </div>
+                </form>
+            </div>
+           </div>
+        </div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+            <div class="govuk-grid-row">
+
+
+           <div class="govuk-grid-column-two-thirds">
+
+                 <h2 class="govuk-heading-l">Application</h2>
+                 <p class="govuk-body">
+                   <strong>Reference number:</strong> <span id="reference-number">XXXXXX</span><br>
+                   <strong>Date submitted:</strong> <span id="date-created">XXXXXXX</span><br>
+                   <strong>Version of questions:</strong>
+
+                    XXXXXXXX
+                     <br>
+                 </p>
+
+
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+        About you
+        </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+              <h2 class="govuk-heading-m">Personal details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                   Kemp
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    First name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Alexis
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  25 March 1998
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+
+          230 St Vincent Street
+                    <br>
+                  Glasgow
+
+                    <br>
+                    United Kingdom
+                    <br>  AB1 1AB
+                  </dd>
+                </div>
+
+
+              </dl>
+
+              <h2 class="govuk-heading-m">Contact details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Who should we contact about your application?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  Me
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Telephone number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    I find it difficult to hear or speak on the telephone
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+    alexis@outlook.co.uk
+                  </dd>
+                </div>
+              </dl>
+
+              <h2 class="govuk-heading-m"> Conditions and disabilities</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Health conditions or disabilities
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                Deaf
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                     How do your conditions or disabilities affect you at work?
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                       I am Deaf and rely on BSL interpreters for most of my communication in the office.  My job in HR means I spend a lot of time communicating face to face with other people. Without interpreter support, I would not be able to participate in meetings with either my team members or other colleagues in the business.  My job in HR means that I spend a lot of time communicating face to face with other people. The only way I can do this is with in-person BSL support. 
+                 </div>
+              </dl>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+      Employment
+        </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m">Employment</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Employment status
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          Employed
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment-status">
+
+                            <span class="govuk-visually-hidden"> your employment status</span>
+                          </a>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Company or organisation name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          Tesco
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/employer-name">
+
+                            <span class="govuk-visually-hidden"> the name of the company or organisation</span>
+                          </a>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Job title
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          HR Assistant
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/job-title">
+
+                            <span class="govuk-visually-hidden"> your job title</span>
+                          </a>
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Job description
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs fdsa sd c fs
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/job-description">
+
+                            <span class="govuk-visually-hidden"> your job description</span>
+                          </a>
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          When did you start working at   Tesco?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          1
+                           January
+
+
+
+
+
+
+
+
+
+
+
+                           2015
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/start-date">
+
+                            <span class="govuk-visually-hidden"> your job start date</span>
+                          </a>
+                        </dd>
+                      </div>
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          How many hours do you work per week?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          32
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/hours-per-week">
+
+                            <span class="govuk-visually-hidden"> how many hours you work per week</span>
+                            </a>
+                        </dd>
+                      </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Which days of the week do you work?
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        Monday, Tuesday, Wednesday, Thursday, Friday
+                        <br>  <br>
+                        <p> Alexis Kemp does not work flexibly or a shift pattern.</p>
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/days-of-week">
+
+                            <span class="govuk-visually-hidden"> which days of the week you work</span>
+                          </a>
+                      </dd>
+                    </div>
+
+
+
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Workplace address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+
+                        <ul class="govuk-list">
+                          <li>220 St Vincent Street,</li>
+                          <li>Glasgow,</li>
+                          <li>AB1 2BA</li>
+                        </ul>
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a href="/alpha-1i/your-job-and-employer/1/employment/workplace-address">
+
+                          <span class="govuk-visually-hidden"> your workplace address</span>
+                        </a>
+                      </dd>
+                    </div>
+
+
+
+
+
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Are you a hybrid worker?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          No
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/your-job-and-employer/1/employment/employer-size">
+
+                            <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
+                          </a>
+                        </dd>
+                      </div>
+                    </dl>
+
+<h2 class="govuk-heading-m">Workplace contact</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Jane Doe
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/your-job-and-employer/1/employment/workplace-contact">
+
+          <span class="govuk-visually-hidden"> their full name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their job title
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Line Manager
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/your-job-and-employer/1/employment/workplace-contact">
+
+          <span class="govuk-visually-hidden"> their job title</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        john@tesco.com
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/your-job-and-employer/1/employment/workplace-contact">
+
+          <span class="govuk-visually-hidden"> their email address</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        123456789
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/your-job-and-employer/1/employment/workplace-contact">
+
+          <span class="govuk-visually-hidden"> their telephone number</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Do you give your permission for us to contact Jane Doe?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Yes
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/your-job-and-employer/1/employment/permission">
+
+          <span class="govuk-visually-hidden"> whether you give your permission for us to contact Jane Doe?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Support from Access to Work
+        </span>
+          </h2>
+        </div>
+
+
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+
+              <h2 class="govuk-heading-m"> Specialist equipment</h2>
+              <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                  Do you need specialist equipment to support you with your condition at work?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          No
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/mental-health-support/screener">
+
+                            <span class="govuk-visually-hidden"> whether you need mental health support at work</span>
+                          </a>
+                        </dd>
+                      </div>
+            <br>  <br>
+
+                    <h2 class="govuk-heading-m">Support worker</h2>
+
+
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Does your condition mean that you need a support worker at work?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          Yes
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a href="/alpha-1i/support-workers/screener">
+
+                            <span class="govuk-visually-hidden"> whether you need a support worker at work</span>
+                          </a>
+                        </dd>
+                      </div>
+
+
+
+
+
+
+
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Does your condition mean that you need a support worker at work?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a href="/alpha-1i/support-workers/screener">
+
+                                    <span class="govuk-visually-hidden"> whether you need a support worker at work</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Do you know what type of support worker you need?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                Yes, I know what I need
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a href="/alpha-1i/support-workers/do-you-know-what-support-worker-you-need">
+
+                                    <span class="govuk-visually-hidden"> whether you know what type of support worker you need</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                Which type of support worker do you need?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                British Sign Language (BSL) interpreter
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a href="/alpha-1i/support-workers/type-of-support">
+
+                                    <span class="govuk-visually-hidden"> which type of support worker you need</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              How will a  British Sign Language (BSL) interpreter
+                               help you at work?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                rwqr fed sfedwferfbfvhtrsbv. b bg fxbrwqr fed sfedwferfbfvhtrsbv. b bg fxbrwqr fed sfedwferfbfvhtrsbv. b bg fxbrwqr fed sfedwferfbfvhtrsbv. b bg fxbrwqr fed sfedwferfbfvhtrsbv. b bg fxbrwqr fed sfedwferfbfvhtrsbv. b bg fxbrwqr fed sfedwferfbfvhtrsbv. b bg fxb
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a href="/alpha-1i/support-workers/how-will-a-support-worker-help">
+
+                                    <span class="govuk-visually-hidden">                     how a  British Sign Language (BSL) interpreter
+                                                         will help you at work</span>
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Will you need a support worker on a temporary basis?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                No, I need a support worker on a permanent basis
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a href="/alpha-1i/support-workers/temporary-basis-1">
+
+                                    <span class="govuk-visually-hidden"> whether you will need a support worker on a temporary basis</span>
+                                </a>
+                            </dd>
+                        </div>
+
+
+
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                How many hours per week do you need this support at work?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                32
+                                 hours per week
+
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a href="/alpha-1i/support-workers/how-many-hours-a-week">
+
+                                    <span class="govuk-visually-hidden"> how many hours per week you need a support worker</span>
+                                </a>
+                            </dd>
+                        </div>
+    </div>    </div>
+
+
+
+
+
+<h2 class="govuk-heading-m">Mental health support</h2>
+<div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Do you want to apply for mental health support from Access to Work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-1i/mental-health-support/screener">
+
+              <span class="govuk-visually-hidden"> whether you need mental health support at work</span>
+            </a>
+          </dd>
+        </div>
+
+  <br>  <br>
+      <h2 class="govuk-heading-m">Travelling during work</h2>
+
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you need support to travel to other locations during your working day?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        No
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-1i/travelling-during-work/screener">
+
+          <span class="govuk-visually-hidden"> whether you need support to travel to other locations during your working day</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+
+
+
+
+        <h2 class="govuk-heading-m">Changes to your workplace</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Does your condition mean that you would benefit from physical changes at your workplace?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/alpha-1i/s-to-your-workplace/screener">
+
+                <span class="govuk-visually-hidden"> whether your condition means that you would benefit from physical s at your workplace</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+      </dl>
+
+
+
+
+
+
+<h2 class="govuk-heading-m">Adaptations to your vehicle</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Does your condition mean that you need adaptations to the vehicle you use to travel to work?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      No
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="/alpha-1i/s-to-your-vehicle/screener">
+
+        <span class="govuk-visually-hidden"> whether your condition means that you need adaptations to the vehicle you use to travel to work</span>
+      </a>
+    </dd>
+  </div>
+
+
+  </dl>
+
+
+
+
+
+
+
+<h2 class="govuk-heading-m">Additional information </h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Do you have any other information you want to add to your application?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      No
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="/alpha-1i/s-to-your-vehicle/screener">
+
+        <span class="govuk-visually-hidden"> whether your condition means that you need adaptations to the vehicle you use to travel to work</span>
+      </a>
+    </dd>
+  </div>
+
+
+  </dl>
+
+
+
+
+
+</div></div>
+
+
+
+</div>
+
+      <form class="form" action="disc#past-week" method="post">
+          <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button">
+                  Application copied
+              </button>
+
+
+          </div>
+      </form>
+
+    </div>
+</div></div></div>
+</div>    </div>    </div>
+
+{% endblock %}

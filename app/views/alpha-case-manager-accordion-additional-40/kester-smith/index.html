@@ -1,0 +1,711 @@
+{% extends "../temp/_BASE.html" %}
+{% set hideback = "true" %}
+{% block pageTitle %}
+  Task list
+{% endblock %}
+{% set case = 'Kester'%}
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+
+
+
+
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#past-day">
+            Case Management
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-week">
+            Application
+          </a>
+        </li>
+        <!-- <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-month">
+            Past month
+          </a>
+        </li> -->
+
+      </ul>
+      <div class="govuk-tabs__panel" id="past-day">
+
+
+     <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+      <p></p>
+
+        <h2 class="govuk-heading-s">Application Summary</h2>
+
+
+    <p> Application refrence: XXXXXX
+    <br> Date Submitted: XXXXXX</p>
+
+    <p><strong>Name:</strong> Kester Smith</p>
+
+
+
+    <p><strong>Condition:</strong> XXXXXX</p>
+
+
+    </div>
+
+
+
+
+     <div class="govuk-grid-column-one-third">
+
+
+
+         <div class="update-panel govuk-form-group">
+            <h3 id="update-specialism-heading" class="govuk-heading-m">Update specialism</h3>
+            <form action="/cases/apply/RMPX30/update-specialism" method="post" class="form" id="form-update-specialism" autocomplete="off" data-submitonce="">
+                <div class="govuk-form-group form-group-compound">
+                <select class="govuk-select" id="specialismId" name="specialism" aria-labelledby="update-specialism-heading">
+
+
+                        <option value="self_employed" data-name="Self-employed">
+                    Self-employed
+                    </option>
+
+                        <option value="director" data-name="Director">
+                    Director
+                    </option>
+
+                        <option value="hidden" data-name="Hidden impairments">
+                    Hidden impairments
+                    </option>
+
+                        <option value="large_employer" data-name="Large employer">
+                    Large employer
+                    </option>
+
+                        <option value="deaf" data-name="Deaf">
+                    Deaf
+                    </option>
+
+                        <option value="visual" data-name="Visually impaired">
+                    Visually impaired
+                    </option>
+
+                        <option value="unknown" data-name="Pan disability" selected="">
+                    Pan disability
+                    </option>
+
+                </select>
+                </div>
+                <div>
+                <input type="submit" class="govuk-button" id="submitButtonSpecialism" value="Save">
+                </div>
+            </form>
+        </div>
+       </div>
+    </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <div class="govuk-grid-row">
+
+
+       <div class="govuk-grid-column-two-thirds">
+
+             <h2 class="govuk-heading-l">Application</h2>
+             <p class="govuk-body">
+               <strong>Reference number:</strong> <span id="reference-number">XXXXXXXX </span><br>
+               <strong>Date submitted:</strong> <span id="date-created">XXXXXXXX </span><br>
+               <strong>Version of questions:</strong>
+
+                  XXXXXXXX
+                 <br>
+             </p>
+
+
+                 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                     <div class="govuk-accordion__section ">
+                         <div class="govuk-accordion__section-header">
+                             <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                       About Kester Smith
+                     </span>
+                             </h2>
+                         </div>
+                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+
+
+
+
+                                  <h2 class="govuk-heading-m">Kester Smith  details</h2>
+
+                                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                   <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                       Name
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                       Kester     Smith
+                                     </dd>
+
+                                   </div>
+                                   <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                       Date of birth
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+
+                                       12
+
+
+
+
+
+                                   June
+
+
+
+
+
+
+                             1993
+                                     </dd>
+
+
+
+                                   </div>
+
+
+
+                                   <div class="govuk-summary-list__row">
+                                     <dt class="govuk-summary-list__key">
+                                       Address
+                                     </dt>
+                                     <dd class="govuk-summary-list__value">
+                                    <ul class="govuk-list"><li>   10 Carey's Wood</li>
+                                      <li>  Smallfield</li>
+                                      <li>  West Sussex</li>
+                                      <li>  Horley</li>
+                                    <li>    Surrey</li>
+                                      <li>         RH6 9PB </li>
+</ul>
+
+
+
+
+                                     </dd>
+
+                                   </div>
+
+
+
+
+
+                                 </dl>
+
+
+
+
+
+
+
+
+                                     <h2 class="govuk-heading-m">How we contact Kester Smith </h2>
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                                       <div class="govuk-summary-list__row">
+                                         <dt class="govuk-summary-list__key">
+                                           Who should we contact about your application?
+                                         </dt>
+                                         <dd class="govuk-summary-list__value">
+                                           Me
+                                         </dd>
+
+                                       </div>
+                                         <div class="govuk-summary-list__row">
+                                           <dt class="govuk-summary-list__key">
+                                             Telephone number
+                                           </dt>
+                                           <dd class="govuk-summary-list__value">
+                                             07888 123098
+                                           </dd>
+
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                           <dt class="govuk-summary-list__key">
+                                             Email address
+                                           </dt>
+                                           <dd class="govuk-summary-list__value">
+                                             smith@gmail.com
+                                           </dd>
+
+                                         </div>
+                                         <div class="govuk-summary-list__row">
+                                           <dt class="govuk-summary-list__key">
+                                             When are the best times to contact you?
+                                           </dt>
+                                           <dd class="govuk-summary-list__value">
+                                             Monday to friday, between 2pm and 6pm
+                                           </dd>
+
+                                         </div>
+
+                                     </dl>
+
+
+
+                                        <h2 class="govuk-heading-m">
+                                          Kester Smith conditions or disabilities
+                                        </h2>
+
+                                        <div class="govuk-!-padding-bottom-2"></div>
+
+                                        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                            <div class="govuk-summary-list__row">
+                                              <dt class="govuk-summary-list__key">
+
+                                                Health conditions or disabilities
+
+                                              </dt>
+                                              <dd class="govuk-summary-list__value">
+                                                ADHD
+                                                <br>
+
+                                                <br>
+
+                                                <br>
+                                              </dd>
+
+                                              <dd class="govuk-summary-list__actions">
+
+
+                                              </dd>
+                                            </div>
+
+                                          <div class="govuk-summary-list__row">
+                                            <dt class="govuk-summary-list__key">
+
+                                              How do your conditions or disabilities affect you at work?
+
+                                            </dt>
+                                            <dd class="govuk-summary-list__value">
+                                              My job means that I need to deal with administration for invoices, tax, banking, wages, training etc. This has always been something that I have struggled with, leading to things getting lost, missed and delayed.    I have always struggled to focus on administrative tasks and a recent ADHD diagnosis has suggested that this is something that I can get support to manage through Access to Work.
+
+                                              <br>
+                                            </dd>
+
+                                            <dd class="govuk-summary-list__actions">
+
+
+
+                                            </dd>
+                                          </div>
+                                        </dl>
+
+
+
+
+                                 </div>
+                               </div>
+
+
+
+                     <div class="govuk-accordion__section ">
+                         <div class="govuk-accordion__section-header">
+                             <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Employment
+                     </span>
+                             </h2>
+                         </div>
+                         <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+
+                                     <h2 class="govuk-heading-m">Employment</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employment status
+        </dt>
+        <dd class="govuk-summary-list__value">
+        Registered director of a limited company
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+        Plumber
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Job description
+        </dt>
+        <dd class="govuk-summary-list__value">
+          I run a small plumbing business with one apprentice and subcontractors when needed. I am a qualified plumber and also go out on jobs myself. I also need to run the administration of the business. This includes issuing invoices, paying suppliers, administrating employment for the apprentice, managing banking and tax returns and other day to day administration of a small business.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          When did you start this job?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+
+
+
+
+
+
+        July
+
+
+
+
+
+           2019
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How many hours do you work per week?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          37
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What is your Unique Taxpayer Reference (UTR)?
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+               1234567890
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which days of the week do you work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Monday,Tuesday,Wednesday,Thursday,Friday<br><br><p> Kester Smith does not work flexibly or a shift pattern.</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Workplace address
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          <ul class="govuk-list">
+            <li>220 St Vincent Street,</li>
+            <li>Glasgow,</li>
+            <li>DV56 0KL </li>
+          </ul>
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+
+
+
+
+    </dl>
+                                         </div>
+
+                             </div>
+
+
+                     <div class="govuk-accordion__section ">
+                         <div class="govuk-accordion__section-header">
+                             <h2 class="govuk-accordion__section-heading">
+                     <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    Support from Access to Work
+                     </span>
+                             </h2>
+                         </div>
+                         <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+
+
+
+
+
+                                     <h2 class="govuk-heading-m">Specialist equipment</h2>
+
+
+
+                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                       <div class="govuk-summary-list__row">
+                                         <dt class="govuk-summary-list__key">
+                                             Does your condition mean that you need specialist equipment at work?
+                                         </dt>
+                                         <dd class="govuk-summary-list__value">
+                                           I do not know
+                                         </dd>
+                                         <dd class="govuk-summary-list__actions">
+
+
+                                         </dd>
+
+
+
+
+
+
+
+
+                                     </dl>
+
+
+      <h2 class="govuk-heading-m">Support worker</h2>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Does your condition mean that you need a support worker at work?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I do not know
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+
+          </dd>
+
+
+
+
+
+
+
+
+      </dl>
+
+
+
+    <h2 class="govuk-heading-m">Mental health support</h2>
+
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Do you want to apply for mental health support from Access to Work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          I do not know
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+
+        </dd>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Travelling to and from work</h2>
+
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+oes your condition mean that it is difficult for you to drive and get public transport to and from work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+
+        </dd>
+
+    </dl>
+    <h2 class="govuk-heading-m">Travelling during work</h2>
+
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Do you need support to travel to other locations during your working day?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        I do not know
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+
+        </dd>
+
+    </dl>
+    <h2 class="govuk-heading-m">Changes to workplace</h2>
+
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Does your condition mean that you would benefit from physical changes at your workplace?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        I do not know
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+
+        </dd>
+
+    </dl>
+
+
+    <h2 class="govuk-heading-m">  Adaptations to your vehicle  </h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Does your condition mean that you need adaptations to the vehicle you use to travel to work?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        I do not know
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+
+        </dd>
+
+    </dl>
+
+     </div>     </div>
+
+
+
+
+                         <div class="govuk-accordion__section ">
+                             <div class="govuk-accordion__section-header">
+                                 <h2 class="govuk-accordion__section-heading">
+                         <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                      Anything else
+                         </span>
+                                 </h2>
+                             </div>
+                             <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+
+
+
+                                         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                           <div class="govuk-summary-list__row">
+                                             <dt class="govuk-summary-list__key">
+                                              Do you have any other information you want to add to your application?
+                                             </dt>
+                                             <dd class="govuk-summary-list__value">
+                                          No
+                                             </dd>
+                                             <dd class="govuk-summary-list__actions">
+
+
+                                             </dd>
+
+                                         </dl>
+                  </div>         </div>
+
+                             </div>
+
+
+             <div class="govuk-!-padding-bottom-4"></div>
+
+                 <form class="form" action="disc#past-week" method="post">
+                     <div class="govuk-button-group">
+                         <button class="govuk-button" data-module="govuk-button">
+                             Application copied
+                         </button>
+
+
+                     </div>
+                 </form>
+
+               </div>
+</div></div></div>
+      </div>    </div>    </div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,938 @@
+{% extends "../temp/_BASE.html" %}
+{% set hideback = "true" %}
+{% block pageTitle %}
+  Task list
+{% endblock %}
+{% set case = 'Wells'%}
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#past-day">
+                Case Management
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#past-week">
+                Application
+              </a>
+            </li>
+            <!-- <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#past-month">
+                Past month
+              </a>
+            </li> -->
+
+          </ul>
+          <div class="govuk-tabs__panel" id="past-day">
+
+
+         <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+
+
+
+          <p></p>
+
+            <h2 class="govuk-heading-s">Application Summary</h2>
+
+
+        <p> Application refrence: XXXXXX
+        <br> Date Submitted: XXXXXX</p>
+
+        <p><strong>Name:</strong>Wells Swanson </p>
+
+
+
+        <p><strong>Condition:</strong> XXXXXX</p>
+
+
+        </div>
+
+
+
+
+         <div class="govuk-grid-column-one-third">
+
+
+
+             <div class="update-panel govuk-form-group">
+                <h3 id="update-specialism-heading" class="govuk-heading-m">Update specialism</h3>
+                <form action="/cases/apply/RMPX30/update-specialism" method="post" class="form" id="form-update-specialism" autocomplete="off" data-submitonce="">
+                    <div class="govuk-form-group form-group-compound">
+                    <select class="govuk-select" id="specialismId" name="specialism" aria-labelledby="update-specialism-heading">
+
+
+                            <option value="self_employed" data-name="Self-employed">
+                        Self-employed
+                        </option>
+
+                            <option value="director" data-name="Director">
+                        Director
+                        </option>
+
+                            <option value="hidden" data-name="Hidden impairments">
+                        Hidden impairments
+                        </option>
+
+                            <option value="large_employer" data-name="Large employer">
+                        Large employer
+                        </option>
+
+                            <option value="deaf" data-name="Deaf">
+                        Deaf
+                        </option>
+
+                            <option value="visual" data-name="Visually impaired">
+                        Visually impaired
+                        </option>
+
+                            <option value="unknown" data-name="Pan disability" selected="">
+                        Pan disability
+                        </option>
+
+                    </select>
+                    </div>
+                    <div>
+                    <input type="submit" class="govuk-button" id="submitButtonSpecialism" value="Save">
+                    </div>
+                </form>
+            </div>
+           </div>
+        </div>
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+            <div class="govuk-grid-row">
+
+
+           <div class="govuk-grid-column-two-thirds">
+
+                 <h2 class="govuk-heading-l">Application</h2>
+                 <p class="govuk-body">
+                   <strong>Reference number:</strong> <span id="reference-number">XXXXXX</span><br>
+                   <strong>Date submitted:</strong> <span id="date-created">XXXXXXX</span><br>
+                   <strong>Version of questions:</strong>
+
+                    XXXXXXXX
+                     <br>
+                 </p>
+
+
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Customer update
+        </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+              <h2 class="govuk-heading-m">Customer details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Swanson
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    First name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  Wells
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+              31 September 1979
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Gender
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  Did not answer
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Ethnicity
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Did not answer
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+
+          23 Vincent Street
+                    <br>
+                  Bristol
+
+                    <br>
+                    United Kingdom
+                    <br>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Postcode
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    AB1 1AB
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Telephone number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  1234567890
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+wells-s@gmail.com
+                  </dd>
+                </div>
+
+              </dl>
+
+              <h2 class="govuk-heading-m">Preferred communication method</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Who should we contact about your application?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  Me
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  Telephone number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  1234567890
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+wells-s@gmail.com
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                When are the best times to contact?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+Between 12 and 1pm monday to friday. Then 6pm till 7pm Tuesday and Thursday.
+                  </dd>
+                </div>
+              </dl>
+
+              <h2 class="govuk-heading-m">Disability description</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                      Health conditions or disabilities
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+              Multiple sclerosis
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                     How customer feels disability affects job
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                       I have MS and as a result have lost virtually all use of my legs.  I have adapted to moving around my office using a wheelchair and my employer has provided me with a custom desk chair that helps to deal with the day-to-day complications of my condition. I have two jobs and my condition affects me differently in each one.  
+
+                       My main job is based on a site that is 8 miles from my home.  I previously relied on a colleague to give me lifts to work.  However, they are now leaving the company and there is no other way for me to get to work.  Consequently, I need transport provided.  
+
+                       Two days a week I work from home as a self-employed graphic designer.  I have previously used a standard office chair. However, my condition has deteriorated to the point that I need a specialist chair to work from like the one that is provided by my employer                  </div>
+              </dl>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Update employer and job
+        </span>
+          </h2>
+        </div>
+
+
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m">Employment 1</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Job title
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                Logo Designer
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Job start date
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                2 March 2019
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Employment status
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+
+        Self-employed
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Unique Taxpayer Reference (UTR)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  1234567890
+                  </dd>
+                </div>
+              </dl>
+
+              <h2 class="govuk-heading-m">Workplace details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                222 St Vincent Street<br>
+                Bristol<br>
+AB1 1AB
+                  </dd>
+                </div>
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Hours worked per week
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    16
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Days in the week worked
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                                            <ul>
+                                                <li>Monday</li>
+                                                <li>Tuesday</li>
+
+
+                                                </ul>
+                                                <p>
+                                                </p><p> Wells Swanson does not work flexibly or a shift pattern.</p>
+                                             </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Job description
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+I design logos and do other graphic design work for a wide range of companies and organisations.  My work involves taking briefs from clients online and over the telephone for designing logos, stationary and digital marketing materials. I also need to carry out small business administrative tasks such as issuing invoices and submitting tax returns online.                 </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How customer feels disability affects job
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    I have MS and as a result have lost virtually all use of my legs.  I have adapted to moving around my office using a wheelchair and my employer has provided me with a custom desk chair that helps to deal with the day-to-day complications of my condition. I have two jobs and my condition affects me differently in each one.  
+
+                    My main job is based on a site that is 8 miles from my home.  I previously relied on a colleague to give me lifts to work.  However, they are now leaving the company and there is no other way for me to get to work.  Consequently, I need transport provided.  
+
+                    Two days a week I work from home as a self-employed graphic designer.  I have previously used a standard office chair. However, my condition has deteriorated to the point that I need a specialist chair to work from like the one that is provided by my employer  </div><div class="govuk-summary-list__row">
+
+
+
+                             <dt class="govuk-summary-list__key">
+                                Other jobs
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                                Yes
+                             </dd>
+                         </div>     </div>        </div>
+
+
+
+                         <h2 class="govuk-heading-m">Employment 2</h2>
+
+                         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Job title
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                        Caterer
+                             </dd>
+                           </div>
+
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Job start date
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                             1 June 1998
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Employment status
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                           Employed
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Company or organisation name
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                             HMP Bristol
+                             </dd>
+                           </div>
+                         </dl>
+
+                         <h2 class="govuk-heading-m">Workplace details</h2>
+
+                         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Address
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                           222 St Vincent Street<br>
+                           Bristol<br>
+                     AB1 1AB
+                             </dd>
+                           </div>
+
+
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Hours worked per week
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                               24
+                             </dd>
+                           </div>
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Days in the week worked
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+                                                       <ul>
+
+                                                           <li>Wednesday</li>
+                                                           <li>Thursday</li>
+                                                           <li>Friday</li>
+
+                                                           </ul>
+                                                           <p>
+                                                           </p><p> Wells Swanson does not work flexibly or a shift pattern.</p>
+                                                        </dd>
+                           </div>
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Hybrid working
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+No                          </div>
+
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               Job description
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+I am an administrator for the catering department in a prison.  My work involves submitting orders, inputting data from stock takes, paying invoices and speaking with suppliers about any issues relating to orders.                            </div>
+                           <div class="govuk-summary-list__row">
+                             <dt class="govuk-summary-list__key">
+                               How customer feels disability affects job
+                             </dt>
+                             <dd class="govuk-summary-list__value">
+I have MS and as a result have lost virtually all use of my legs. I have adapted to moving around my office using a wheelchair and my employer has provided me with a custom desk chair that helps to deal with the day-to-day complications of my condition. I have two jobs and my condition affects me differently in each one.   My main job is based on a site that is 8 miles from my home. I previously relied on a colleague to give me lifts to work. However, they are now leaving the company and there is no other way for me to get to work. Consequently, I need transport provided.   Two days a week I work from home as a self-employed graphic designer. I have previously used a standard office chair. However, my condition has deteriorated to the point that I need a specialist chair to work from like the one that is provided by my employer                       </div><div class="govuk-summary-list__row">
+
+
+
+                                        <dt class="govuk-summary-list__key">
+                                           Other jobs
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                           No
+                                        </dd>
+                                    </div>
+
+
+
+
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Support customers feels may be needed
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+              <ul>
+                <li>  Specialist equipment</li>
+<li>Travelling to and from work</li>
+</ul>
+
+                  </dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Support customers feels they do not needed
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <ul>
+                        <li>Support worker</li>
+                          <li>Mental health support</li>
+
+                      <li>Changes to workplace</li>
+                      <li>Adaptations to a vehicle</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+<h2 class="govuk-heading-m">Workplace contact</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their name
+      </dt>
+      <dd class="govuk-summary-list__value">
+      Jane Doe
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their job title
+      </dt>
+      <dd class="govuk-summary-list__value">
+      HR
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+  doe@bristal.gov.co.uk
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        123456789
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Permission for us to contact Jane Doe
+      </dt>
+      <dd class="govuk-summary-list__value">
+        No
+      </dd>
+
+    </div>
+  </dl>
+            </div>
+          </div>
+
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Support requested
+        </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m">Create business case</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Job description 1
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+I design logos and do other graphic design work for a wide range of companies and organisations.  My work involves taking briefs from clients online and over the telephone for designing logos, stationary and digital marketing materials. I also need to carry out small business administrative tasks such as issuing invoices and submitting tax returns online. 
+</dd>
+</div>
+  <div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">
+  Job description 2
+</dt>
+
+<dd class="govuk-summary-list__value">
+I am an administrator for the catering department in a prison.  My work involves submitting orders, inputting data from stock takes, paying invoices and speaking with suppliers about any issues relating to orders. 
+
+                        </dd>
+                      </div>
+
+
+  <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How customer feels disability affects job
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    I have MS and as a result have lost virtually all use of my legs.  I have adapted to moving around my office using a wheelchair and my employer has provided me with a custom desk chair that helps to deal with the day-to-day complications of my condition. I have two jobs and my condition affects me differently in each one.  
+
+                    My main job is based on a site that is 8 miles from my home.  I previously relied on a colleague to give me lifts to work.  However, they are now leaving the company and there is no other way for me to get to work.  Consequently, I need transport provided.  
+
+                    Two days a week I work from home as a self-employed graphic designer.  I have previously used a standard office chair. However, my condition has deteriorated to the point that I need a specialist chair to work from like the one that is provided by my employer 
+                      </dd>  </div>
+
+
+
+                      <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Support customers feels may be needed
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                  <ul>
+                    <li>  Specialist equipment</li>
+    <li>Travelling to and from work</li>
+    </ul>
+
+                      </dd>
+                    </div>
+
+                    <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Support customers does not know if they need
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+              Changes to workplace
+
+                    </dd>
+                  </div>
+
+                    <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                          Support customers feels they do not needed
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            <ul>
+                                <li>Support worker</li>
+                                  <li>Mental health support</li>
+
+
+                              <li>Adaptations to a vehicle</li>
+                            </ul>
+                          </dd>
+                        </div>
+              </dl>
+
+              <h2 class="govuk-heading-m"> Specialist equipment</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            What type of specialist equipment do you need?
+            </dt>
+            <dd class="govuk-summary-list__value">
+          Ergonomic Chair
+
+            </dd>
+
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+    Which job do you need Ergonomic Chair for?
+        </dt>
+        <dd class="govuk-summary-list__value">
+    Logo Designer
+
+        </dd>
+
+        </div>
+
+
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Do you have quotes for the cost of Ergonomic Chair?
+            </dt>
+            <dd class="govuk-summary-list__value">
+            No
+
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+
+            </dd>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            How will this equipment help you at work?
+            </dt>
+            <dd class="govuk-summary-list__value">
+
+Because of my MS, I struggle with my seating posture and need a chair that can be adapted to my needs.  This includes being able to support my posture given my weakened muscles and the ability for the wheels to lock in place when I lift myself in from my wheelchair 
+
+            </dd>
+
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+            </div>
+
+
+
+
+
+              </dl>
+
+    <h2 class="govuk-heading-m">Travelling to and from work</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+How do you get to work now?
+  </dt>
+  <dd class="govuk-summary-list__value">
+Drive or lift in a car
+
+  </dd>
+
+  </div>
+
+
+  <div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">
+What type of support do you need to travel to work?
+</dt>
+<dd class="govuk-summary-list__value">
+Taxi
+
+</dd>
+
+</div>
+
+
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+  Which job do you need this travel to work support for?
+  </dt>
+  <dd class="govuk-summary-list__value">
+Caterer at HMP Bristol
+  </dd>
+  <dd class="govuk-summary-list__actions">
+
+
+  </dd>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+  How will support to travel to and from work meet your needs?
+  </dt>
+  <dd class="govuk-summary-list__value">
+
+My job is based on a site that is 8 miles from my home and around a 20 minute car journey away.  I previously relied on a colleague to give me lifts to work because I have had to give up driving and I live in a rural location so there is no public transport available.  However, my colleague is now leaving and there is no other way for me to get to work.  Consequently, I need transport provided or else I will have to give the job up. 
+  </dd>
+
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+How many journeys will you need support for in a week?
+  </dt>
+  <dd class="govuk-summary-list__value">
+
+6 journeys per week   </dd>
+
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Will your journeys to and from work be between your home and work addresses?
+  </dt>
+  <dd class="govuk-summary-list__value">
+
+Yes  </dd>
+
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Do you have quotes for the support you need to travel to work?
+  </dt>
+  <dd class="govuk-summary-list__value">
+
+  No, I do not have quotes  </dd>
+
+  <dd class="govuk-summary-list__actions">
+
+  </dd>
+  </div>
+
+    </dl>
+
+
+
+              <h2 class="govuk-heading-m">     Additional information </h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                       Is there anything else that Wells Swanson would like to tell us?
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                       No
+                      </dd>
+                  </div>
+
+
+              </dl>
+           </div>
+           </div>
+           </div>       </div>       </div>
+
+  <div class="govuk-!-padding-bottom-4"></div>
+
+      <form class="form" action="disc#past-week" method="post">
+          <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button">
+                  Application copied
+              </button>
+
+
+          </div>
+      </form>
+
+    </div>
+</div></div></div>
+</div>    </div>    </div>
+
+{% endblock %}

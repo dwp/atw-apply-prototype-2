@@ -1,0 +1,71 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+You may not be eligible – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                You may not be eligible
+              </h1>
+            </legend>
+
+            <div class="govuk-!-padding-bottom-3"></div>
+
+            <p>Based on your answers, you may not be eligible for Access to Work.</p>
+
+            <p>You are not eligible if you are receiving any of the following benefits:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Employment Support Allowance (unless you are doing supported permitted work or work less than 16 hours a week)</li>
+              <li>Incapacity Benefit</li>
+              <li>Income Support</li>
+              <li>Severe Disablement Allowance</li>
+            </ul>
+
+            <div class="govuk-!-padding-bottom-3"></div>
+
+          
+          </fieldset>
+
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}

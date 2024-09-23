@@ -1,0 +1,229 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+#
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/alpha-apply-1e/1e-about-to-start-employment-do-you-have-another-job">Back</a>
+{% endblock %}
+
+{% block content %}
+
+      <h1 class="govuk-heading-xl">Check your answers: employment status</h1>
+
+      <h2 class="govuk-heading-m">Employment details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employment status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            About to start employment
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-status">
+              Change
+              <span class="govuk-visually-hidden"> what is your employment status</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What will your job title be?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['job-title'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-job-title">
+              Change
+              <span class="govuk-visually-hidden"> What will your job title be?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What will your job description be?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['employment-job-description'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-job-description">
+              Change
+              <span class="govuk-visually-hidden"> What will your job description be?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            When will you be starting your new job?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['about-to-start-employment-start-date-day'] }} /
+            {{ data['about-to-start-employment-start-date-month'] }} /
+            {{ data['about-to-start-employment-start-date-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-start-date">
+              Change
+              <span class="govuk-visually-hidden"> When will you be starting your new job?</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many hours will you work per week?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['hours per week'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-hours-per-week">
+              Change
+              <span class="govuk-visually-hidden"> How many hours will you work per week?</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company or organisation name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['employer-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-employer-name">
+              Change
+              <span class="govuk-visually-hidden"> what is your companies or organisations name</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+            <li>{{ data['workplace-postcode-select'] }} St Vincent Street,</li>
+              <li>Glasgow,</li>
+              <li>{{data["workplace-postcode"]}}</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-workplace-address">
+              Change
+              <span class="govuk-visually-hidden"> what is your workplace address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How many people work at your company or organisation?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['1e-employment-employer-size'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/alpha-apply-1e/1e-about-to-start-employment-employer-size">
+              Change
+              <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+  <h2 class="govuk-heading-m">Workplace contact</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['workplace-name'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1e/1e-about-to-start-employment-workplace-contact">
+          Change
+          <span class="govuk-visually-hidden"> what is your workplace contacts name</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their role
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['role-name'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1e/1e-about-to-start-employment-workplace-contact">
+          Change
+          <span class="govuk-visually-hidden"> what is your workplace contacts role</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['workplace-email'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1e/1e-about-to-start-employment-workplace-contact">
+          Change
+          <span class="govuk-visually-hidden"> what is your workplace contacts email address</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Their phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['workplace-phone'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1e/1e-about-to-start-employment-workplace-contact">
+          Change
+          <span class="govuk-visually-hidden"> what is your workplace contacts phone number</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+  <h2 class="govuk-heading-m">Additional employment</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Do you have another job?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['do-you-have-another-job'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="/alpha-apply-1e/1e-about-to-start-employment-do-you-have-another-job">
+          Change
+          <span class="govuk-visually-hidden"> Do you have another job?</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+
+  <form class="form" action="/alpha-apply-1e/1e-task-list" method="post">
+    <input type="hidden" name="about-to-start-employment-check-your-answers" value="true">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and save
+        </button>
+
+      </form>
+
+
+  </div>
+{% endblock %}

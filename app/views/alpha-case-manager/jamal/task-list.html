@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-form-group">
+
+    <div class="govuk-grid-row-2">
+      <!DOCTYPE html>
+      <style>
+  .govuk-grid-row-2 {
+  background-color: #1f70b8;
+  color: #fff;
+  margin-top: 1.25em;
+  margin-bottom: 2.25em;
+  padding: 20px 40px 2px;
+  }
+
+  </style>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <fieldset class="govuk-fieldset">
+        <span class="govuk-caption-xl" style="color:white">AB 12 30 07 C</span>
+        <h1 class="govuk-heading-xl" style="color:white">Jamal Smith</h1>
+
+      </fieldset>
+      </html>
+
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <ol class="app-task-list">
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> DiSC updates
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/update-customer" aria-describedby="eligibility-status">
+                  Update customer
+                </a>
+              </span>
+              <strong>
+                {%if data['update-customer-true-jamal'] =="true" %}
+                <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+                {% else %}
+                <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+                {% endif %}
+              </strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/employer-and-job" aria-describedby="eligibility-status">
+                  Update employer and job
+                </a>
+              </span>
+              {%if data['employer-and-job-true-jamal'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/business-case" aria-describedby="eligibility-status">
+                  Create business case
+                </a>
+              </span>
+              {%if data['business-case-true-jamal'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}
+            </li>
+          </ul>
+        </li>
+
+        <li>
+        <h3 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> Requested support
+        </h3>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/specialist-equipment" aria-describedby="eligibility-status">
+                  Equipment, adaptations and software
+                </a>
+              </span>
+            {%if data['specialist-equipment-true-jamal'] =="true" %}
+            <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+            {% endif %}
+          </li>
+          <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/travelling-to-and-from-work" aria-describedby="eligibility-status">
+                  Travelling to and from work
+                </a>
+              </span>
+            {%if data['travelling-to-and-from-work-true-jamal'] =="true" %}
+            <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+            {% endif %}
+          </li>
+          <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/changes-to-your-workplace" aria-describedby="eligibility-status">
+                  Changes to your workplace
+                </a>
+              </span>
+            {%if data['changes-to-your-workplace-true-jamal'] =="true" %}
+            <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+            {% endif %}
+          </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Customer contact preferences and details
+          </h3>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/alpha-case-manager/jamal/contact-preferences" aria-describedby="eligibility-status">
+                  Contact details
+                </a>
+              </span>
+              {%if data['contact-preferences-true-jamal'] =="true" %}
+              <strong class="govuk-tag app-task-list__tag" id="completed">Reviewed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="not started">Not reviewed</strong>
+              {% endif %}
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <form class="form" action="/alpha-case-manager/your-cases" method="post">
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Completed
+        </button>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to your cases
+        </button>
+      </div>
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+  </div>
+
+{% endblock %}
