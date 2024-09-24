@@ -1,0 +1,73 @@
+{% extends "layout-contact.html" %}
+
+{% block pageTitle %}
+You may not be eligible – Access to Work – GOV.UK
+{% endblock %}
+
+{% if not inEditMode and casa.journeyPreviousUrl %}
+{{ govukBackLink({
+classes: 'hide-print',
+text: t('common:back'),
+href: casa.journeyPreviousUrl
+}) }}
+{% endif %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-form-group">
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                You may not be eligible
+              </h1>
+            </legend>
+
+            <div class="govuk-!-padding-bottom-3"></div>
+
+            <p>Based on your answers, you may not be eligible for Access to Work.</p>
+
+            <p>To be eligible for Access to Work, you must:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>have a physical or mental health condition or disability that means you need support to do your job, or get to and from work</li>
+              <li>be 16 or over</li>
+              <li>be in paid work (or be about to start or return to paid work)</li>
+              <li>live and work (or be about to start or return to work) in England, Scotland or Wales – there is a
+                <a href="https://www.nidirect.gov.uk/articles/employment-support-information">different system in Northern Ireland</a></li>            </ul>
+
+            <div class="govuk-!-padding-bottom-3"></div>
+
+
+
+          </fieldset>
+
+        </div>
+
+        <div class="govuk-!-padding-bottom-0"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    
+
+  </div>
+</div>
+
+  </div>
+
+{% endblock %}
