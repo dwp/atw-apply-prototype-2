@@ -20,12 +20,12 @@
           <dd class="govuk-summary-list__value">
             Employed
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment-status">
               Change
               <span class="govuk-visually-hidden"> your employment status</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -34,12 +34,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['employer-name-'+ number] | capitalize }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/employer-name">
               Change
               <span class="govuk-visually-hidden"> the name of the company or organisation</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -48,12 +48,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['job-title-'+ number] }}{{ data['job-title-employed-'+ number] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/job-title">
               Change
               <span class="govuk-visually-hidden"> your job title</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
         <div class="govuk-summary-list__row">
@@ -63,12 +63,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['employment-job-description'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/job-description">
               Change
               <span class="govuk-visually-hidden"> your job description</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
         <div class="govuk-summary-list__row">
@@ -91,12 +91,12 @@
             {% if data['employment-start-month'] =='12' %} December {% endif%}
              {{ data['employment-start-year'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/start-date">
               Change
               <span class="govuk-visually-hidden"> your job start date</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
         <div class="govuk-summary-list__row">
@@ -106,12 +106,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['hours per week'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/hours-per-week">
               Change
               <span class="govuk-visually-hidden"> how many hours you work per week</span>
               </a>
-          </dd>
+          </dd>{% endif %}
         </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -120,12 +120,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['day-of-week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/days-of-week">
               Change
               <span class="govuk-visually-hidden"> which days of the week you work</span>
             </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
 
@@ -152,12 +152,12 @@
           </ul>
           {% endif %}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/employment/workplace-address">
             Change
             <span class="govuk-visually-hidden"> your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -183,12 +183,12 @@
             <br>
           </ul>
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/employment/address-manual">
             Change
             <span class="govuk-visually-hidden"> your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -200,12 +200,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['1i-hybrid'+ number] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/employment/employer-size">
               Change
               <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
       </dl>
 
@@ -219,12 +219,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['workplace-name'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+    {% if print != true %}  <dd class="govuk-summary-list__actions">
         <a href="/beta-1a/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> their full name</span>
         </a>
-      </dd>
+      </dd>{% endif %}
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
@@ -233,12 +233,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['role-name'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+    {% if print != true %}  <dd class="govuk-summary-list__actions">
         <a href="/beta-1a/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> their job title</span>
         </a>
-      </dd>
+      </dd>{% endif %}
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
@@ -247,12 +247,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['workplace-email'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+    {% if print != true %}  <dd class="govuk-summary-list__actions">
         <a href="/beta-1a/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> their email address</span>
         </a>
-      </dd>
+      </dd>{% endif %}
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
@@ -261,12 +261,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['workplace-phone'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+    {% if print != true %}  <dd class="govuk-summary-list__actions">
         <a href="/beta-1a/your-job-and-employer/{{number}}/employment/workplace-contact">
           Change
           <span class="govuk-visually-hidden"> their telephone number</span>
         </a>
-      </dd>
+      </dd>{% endif %}
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
@@ -275,12 +275,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['permission-contact'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+    {% if print != true %}  <dd class="govuk-summary-list__actions">
         <a href="/beta-1a/your-job-and-employer/{{number}}/employment/permission">
           Change
           <span class="govuk-visually-hidden"> whether you give your permission for us to contact {{data['workplace-name']}}?</span>
         </a>
-      </dd>
+      </dd>{% endif %}
     </div>
   </dl>
 
@@ -294,7 +294,7 @@
       <dd class="govuk-summary-list__value">
         {{ data['do-you-have-another-job'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+   <dd class="govuk-summary-list__actions">
         <a href="/alpha-apply-1hb-employment-do-you-have-another-job">
           Change
           <span class="govuk-visually-hidden"> Do you have another job?</span>
@@ -315,12 +315,12 @@
         <dd class="govuk-summary-list__value">
         {{data['1i-employment-status'+ number]}}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/employment-status">
             Change
             <span class="govuk-visually-hidden"> your employment status</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -329,12 +329,12 @@
         <dd class="govuk-summary-list__value">
         {{ data['job-title-'+ number] }}{{ data['job-title-employed-'+ number] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1i/1h-self-employment-job-title">
             Change
             <span class="govuk-visually-hidden"> your job title</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -344,12 +344,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['self-employment-job-description'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/job-description">
             Change
             <span class="govuk-visually-hidden"> your job description</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
 
@@ -374,12 +374,12 @@
        {% if data['self-employment-start-month'] =='12' %} December {% endif%}
            {{ data['self-employment-start-year'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/start-date">
             Change
             <span class="govuk-visually-hidden"> your job start date</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -388,12 +388,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['hours per week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/hours-per-week">
             Change
             <span class="govuk-visually-hidden"> how many hours you work per week</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
 
@@ -408,12 +408,12 @@
           <p>I do not have a UTR</p>
           {% endif %}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/utr">
             Change
             <span class="govuk-visually-hidden"> your Unique Taxpayer Reference (UTR)</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -423,12 +423,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['day-of-week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/days-of-week">
               Change
               <span class="govuk-visually-hidden"> which days of the week you work</span>
               </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% if data['self-employment-workplace-address-select-true'] =="true" %}
@@ -454,12 +454,12 @@
           </ul>
           {% endif %}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/workplace-address">
             Change
             <span class="govuk-visually-hidden"> your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -484,12 +484,12 @@
             <br>
           </ul>
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/self-employed/address-manual">
             Change
             <span class="govuk-visually-hidden"> your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -507,7 +507,7 @@
         <dd class="govuk-summary-list__value">
           {{ data['do-you-have-another-job'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+   <dd class="govuk-summary-list__actions">
           <a href="/alpha-apply-1hb-self-employment-do-you-have-another-job">
             Change
             <span class="govuk-visually-hidden"> Do you have another job?</span>
@@ -526,12 +526,12 @@
         <dd class="govuk-summary-list__value">
           About to start employment
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/employment-status">
             Change
             <span class="govuk-visually-hidden"> your employment status</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -540,12 +540,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['employer-name-about-'+number] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/employer-name">
             Change
             <span class="govuk-visually-hidden"> the name of the company or organisation</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -554,12 +554,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['job-title-about-director-'+number] }}{{ data['job-title-about-employment-'+number] }}{{ data['job-title-'+ number] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/job-title">
             Change
             <span class="govuk-visually-hidden"> what your job title will be</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -569,12 +569,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['employment-job-description'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/job-description">
             Change
             <span class="govuk-visually-hidden"> what your job description will be</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -597,12 +597,12 @@
        {% if data['about-to-start-employment-start-date-month'] =='12' %} December {% endif%}
           {{ data['about-to-start-employment-start-date-year'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/start-date">
             Change
             <span class="govuk-visually-hidden"> your job start date</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -611,12 +611,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['hours per week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/hours-per-week">
             Change
             <span class="govuk-visually-hidden"> how many hours you will work per week</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -625,12 +625,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['day-of-week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/days-of-week">
             Change
             <span class="govuk-visually-hidden"> which days of the week you will work</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
 
@@ -657,12 +657,12 @@
           </ul>
           {% endif %}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/workplace-address">
             Change
             <span class="govuk-visually-hidden"> your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -687,12 +687,12 @@
             <br>
           </ul>
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/address-manual">
             Change
             <span class="govuk-visually-hidden"> your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -704,12 +704,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['1i-hybrid'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/employer-size">
             Change
             <span class="govuk-visually-hidden"> how many people work at your company or organisation</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
     </dl>
 
@@ -724,12 +724,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['workplace-name'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> their full name</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -738,12 +738,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['role-name'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> their job title</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -752,12 +752,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['workplace-email'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> their email address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -766,12 +766,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['workplace-phone'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/workplace-contact">
             Change
             <span class="govuk-visually-hidden"> their telephone number</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
     </dl>
 
@@ -785,7 +785,7 @@
         <dd class="govuk-summary-list__value">
           {{ data['do-you-have-another-job'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-employment/do-you-have-another-job">
             Change
             <span class="govuk-visually-hidden"> Do you have another job?</span>
@@ -804,12 +804,12 @@
         <dd class="govuk-summary-list__value">
           About to start self-employment
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/employment-status">
             Change
             <span class="govuk-visually-hidden"> what is your employment status</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -818,12 +818,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['job-title-about-'+number] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/job-title">
             Change
             <span class="govuk-visually-hidden"> What will your job title be?</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -833,12 +833,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['about-to-start-self-employment-job-description'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/job-description">
             Change
             <span class="govuk-visually-hidden"> what is your job title</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -848,12 +848,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['about-to-start-self-employment-do-you-have-a-utr'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/do-you-have-a-utr">
             Change
             <span class="govuk-visually-hidden"> Do you have a Unique Taxpayer Reference (UTR) number?</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% if (data['about-to-start-self-employment-do-you-have-a-utr'] =="Yes") %}
@@ -865,12 +865,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['utr'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/utr">
             Change
             <span class="govuk-visually-hidden"> What is your Unique Taxpayer Reference (UTR)?</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -895,12 +895,12 @@
        {% if data['about-to-start-self-employment-start-date-month'] =='12' %} December {% endif%}
           {{ data['about-to-start-self-employment-start-date-year'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/start-date">
             Change
             <span class="govuk-visually-hidden"> When will you be starting your self-employment?</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -909,12 +909,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['hours per week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/hours-per-week">
             Change
             <span class="govuk-visually-hidden"> How many hours do you think you'll work per week?</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       <div class="govuk-summary-list__row">
@@ -924,12 +924,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['day-of-week'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/days-of-week">
             Change
             <span class="govuk-visually-hidden"> What days of the week will you work?</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% if data['about-to-start-self-employment-workplace-address-select-true'] =="true" %}
@@ -955,12 +955,12 @@
           </ul>
           {% endif %}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/workplace-address">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -985,12 +985,12 @@
             <br>
           </ul>
         </dd>
-        <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/address-manual">
             Change
             <span class="govuk-visually-hidden"> what is your workplace address</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
 
       {% endif %}
@@ -1008,7 +1008,7 @@
         <dd class="govuk-summary-list__value">
           {{ data['do-you-have-another-job'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+      <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/your-job-and-employer/{{number}}/about-to-start-self-employment/do-you-have-another-job">
             Change
             <span class="govuk-visually-hidden"> Do you have another job?</span>

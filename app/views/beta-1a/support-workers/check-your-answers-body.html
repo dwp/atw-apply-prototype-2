@@ -16,13 +16,13 @@
           <dd class="govuk-summary-list__value">
             {{ data['support-worker-screener'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/support-workers/screener">
               Change
               <span class="govuk-visually-hidden"> whether you need a support worker at work</span>
             </a>
-          </dd>
-        </div>        
+          </dd>{% endif %}
+        </div>
     {% endif %}
 
       {% if (data['support-worker-do-you-know-what-support-worker-you-need'] =="No, I do not know what I need") %}

@@ -19,12 +19,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['contacting-you-about-your-application'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/contacting-you-about-your-application">
               Change
               <span class="govuk-visually-hidden"> who we should contact about your application</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
         <div class="govuk-summary-list__row">
@@ -34,12 +34,12 @@
           <dd class="govuk-summary-list__value">
             I find it difficult to hear or speak on the telephone
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/confirm-phone">
               Change
               <span class="govuk-visually-hidden"> your email address</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
         <div class="govuk-summary-list__row">
@@ -49,12 +49,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['email-reasonable-adjustment'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}    <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/what-is-your-email">
               Change
               <span class="govuk-visually-hidden"> your email address</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
       </dl>
@@ -77,12 +77,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['contacting-you-about-your-application'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/how-we-contact-you/contacting-you-about-your-application">
             Change
             <span class="govuk-visually-hidden"> who we should contact about your application</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -91,12 +91,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['telephone-number'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/confirm-phone">
               Change
               <span class="govuk-visually-hidden"> your telephone number</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -105,12 +105,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['your-email'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}    <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/what-is-your-email">
               Change
               <span class="govuk-visually-hidden"> your email address</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -119,12 +119,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['contact-selecting-time'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/selecting-time">
               Change
               <span class="govuk-visually-hidden"> the best times to contact you</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
     </dl>
@@ -145,12 +145,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['contacting-you-about-your-application'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+      {% if print != true %}  <dd class="govuk-summary-list__actions">
         <a href="/beta-1a/how-we-contact-you/contacting-you-about-your-application">
           Change
           <span class="govuk-visually-hidden"> who we should contact about your application</span>
         </a>
-      </dd>
+      </dd>{% endif %}
     </div>
     </dl>
 
@@ -165,12 +165,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['contacting-someone-else-name'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/someone-else">
               Change
               <span class="govuk-visually-hidden"> their full name</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -179,12 +179,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['relationship-to-you'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}    <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/someone-else">
               Change
               <span class="govuk-visually-hidden"> their relationship to you</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -193,12 +193,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['contacting-someone-else-phone'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+        {% if print != true %}    <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/someone-else">
               Change
               <span class="govuk-visually-hidden"> their telephone number</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -207,12 +207,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['contacting-someone-else-email'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/someone-else">
               Change
               <span class="govuk-visually-hidden"> their email address</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
       </dl>
@@ -228,12 +228,12 @@
             {% if data['telephone-number']%}{{ data['telephone-number'] }}{% else%}
               I find it difficult to hear or speak on the telephone{% endif %}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/confirm-phone">
               Change
               <span class="govuk-visually-hidden"> your telephone number</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -243,12 +243,12 @@
           {% if data['telephone-number']%}  {{ data['your-email'] }}{% else%}
               {{ data['email-reasonable-adjustment'] }}{% endif %}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/how-we-contact-you/reasonable-adjustment">
               Change
               <span class="govuk-visually-hidden"> your email address</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
 
         </dl>

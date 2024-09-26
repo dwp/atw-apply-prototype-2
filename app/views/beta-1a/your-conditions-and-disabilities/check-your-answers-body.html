@@ -33,7 +33,7 @@
             {% endif %}
             <br>
           </dd>
-
+{% if print != true %}
           <dd class="govuk-summary-list__actions">
 
             <a href="/beta-1a/your-conditions-and-disabilities/1">
@@ -41,7 +41,7 @@
               <span class="govuk-visually-hidden"> your conditions or disabilities</span>
             </a>
 
-          </dd>
+          </dd>{% endif %}
         </div>
 
       <div class="govuk-summary-list__row">
@@ -55,7 +55,7 @@
 
           <br>
         </dd>
-
+{% if print != true %}
         <dd class="govuk-summary-list__actions">
 
           <a href="/beta-1a/your-conditions-and-disabilities/how-does-it-affect-you-at-work-1">
@@ -63,7 +63,7 @@
             <span class="govuk-visually-hidden"> how your conditions or disabilities affect you at work</span>
           </a>
 
-        </dd>
+        </dd>{% endif %}
       </div>
     </dl>
     {% endif %}

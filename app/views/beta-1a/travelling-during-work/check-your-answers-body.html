@@ -14,12 +14,12 @@
     <dd class="govuk-summary-list__value">
       {{ data['travel-during-work-screener'] }}
     </dd>
-    <dd class="govuk-summary-list__actions">
+    {% if print != true %}  <dd class="govuk-summary-list__actions">
       <a href="/beta-1a/travelling-during-work/screener">
         Change
         <span class="govuk-visually-hidden"> whether you need support to travel to other locations during your working day</span>
       </a>
-    </dd>
+    </dd>{% endif %}
   </div>
 
 {% endif %}

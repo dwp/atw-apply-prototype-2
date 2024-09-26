@@ -15,12 +15,12 @@
         <dd class="govuk-summary-list__value">
           {{ data['workplace-adaptations-screener'] }}
         </dd>
-        <dd class="govuk-summary-list__actions">
+        {% if print != true %}  <dd class="govuk-summary-list__actions">
           <a href="/beta-1a/changes-to-your-workplace/screener">
             Change
             <span class="govuk-visually-hidden"> whether your condition means that you would benefit from physical changes at your workplace</span>
           </a>
-        </dd>
+        </dd>{% endif %}
       </div>
     {% endif %}
 {% if data['workplace-adaptations-screener'] =="Yes" %}

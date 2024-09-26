@@ -14,12 +14,12 @@
       <dd class="govuk-summary-list__value">
         {{ data['specialist-equipment-screener'] }}
       </dd>
-      <dd class="govuk-summary-list__actions">
+      {% if print != true %}<dd class="govuk-summary-list__actions">
         <a href="/beta-1a/equipment-adaptations-and-software/screener">
           Change
           <span class="govuk-visually-hidden"> Do you need specialist equipment to support you with your condition at work?</span>
         </a>
-      </dd>
+      </dd>  {% endif %}
     </div>
 
   {% endif %}

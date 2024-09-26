@@ -17,12 +17,12 @@
           <dd class="govuk-summary-list__value">
             {{ data['extra-information-screener'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+          {% if print != true %}  <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/anything-else-you-would-like-to-tell-us/screener">
               Change
               <span class="govuk-visually-hidden"> whether you have any other information you want to add</span>
             </a>
-          </dd>
+          </dd>{% endif %}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
