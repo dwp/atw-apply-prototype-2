@@ -13,10 +13,10 @@
           <dt class="govuk-summary-list__key">
           Do you want to apply for mental health support from Access to Work?
           </dt>
-          {% if print != true %}  <dd class="govuk-summary-list__value">
+       <dd class="govuk-summary-list__value">
             {{ data['mental-health-support-screener'] }}
           </dd>
-          <dd class="govuk-summary-list__actions">
+            {% if print != true %}   <dd class="govuk-summary-list__actions">
             <a href="/beta-1a/mental-health-support/screener">
               Change
               <span class="govuk-visually-hidden"> whether you need mental health support at work</span>
